@@ -1,0 +1,7 @@
+monolog:
+  channels: ['db']
+  handlers:
+    dbHandler:
+      channels: ['db']
+      type: service
+      id: dbHandler
