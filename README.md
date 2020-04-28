@@ -8,7 +8,7 @@ Projet utilisé pour les vidéos sur les logs/les events suscribers
 
 ```composer install```
 
-```php bin/console doctrine:create:databse```
+```php bin/console doctrine:create:database```
 
 ```php bin/console doctrine:migrations:migrate```
 
