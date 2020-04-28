@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h3>Users</h3>
+    <a href="{{path('user_create')}}">Ajouter</a>
+    <table class="table table-sm table-striped">
+        <thead>
+            <th>Nom</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{user.username}}</td>
+                    <td>
+                        <a href="{{path('user_edit', {'id': user.id})}}">Modifier</a>
+                        <a href="{{path('user_delete', {'id': user.id})}}">Supprimer</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

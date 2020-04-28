@@ -48,6 +48,11 @@ class Log
      */
     private $createdAt;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="logs")
+     */
+    private $user;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -133,5 +138,17 @@ class Log
     public function onPrePersist()
     {
         $this->createdAt = new DateTime();
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
     }
 }

@@ -4,4 +4,4 @@ monolog:
     dbHandler:
       channels: ['db']
       type: service
-      id: dbHandler
+      id: monolog.dbHandler

@@ -14,7 +14,6 @@ class HomeController extends AbstractController
      */
     public function index(LoggerInterface $dbLogger)
     {
-        dd($this->getUser());
         $dbLogger->info('Notre premier log');
 
         return $this->render('home/index.html.twig', [
